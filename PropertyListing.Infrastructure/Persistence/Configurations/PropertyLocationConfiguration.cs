@@ -1,0 +1,1 @@
+// Bu dosya varsa tamamen silinmeli çünkü PropertyLocation artık owned type 

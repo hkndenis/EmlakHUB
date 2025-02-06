@@ -1,0 +1,8 @@
+<Project>
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+    <RestorePackagesPath>$(MSBuildThisFileDirectory)packages</RestorePackagesPath>
+    <RestoreFallbackFolders>clear</RestoreFallbackFolders>
+    <DisableImplicitNuGetFallbackFolder>true</DisableImplicitNuGetFallbackFolder>
+  </PropertyGroup>
+</Project> 

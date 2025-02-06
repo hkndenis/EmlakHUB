@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>MediatR</id>
+    <version>12.2.0</version>
+    <authors>Jimmy Bogard</authors>
+    <license type="expression">Apache-2.0</license>
+    <licenseUrl>https://licenses.nuget.org/Apache-2.0</licenseUrl>
+    <icon>gradient_128x128.png</icon>
+    <description>Simple, unambitious mediator implementation in .NET</description>
+    <copyright>Copyright Jimmy Bogard</copyright>
+    <tags>mediator request response queries commands notifications</tags>
+    <repository type="git" url="https://github.com/jbogard/MediatR" commit="6baaeef7a16ca75cb905829f870f79c6334ef40e" />
+    <dependencies>
+      <group targetFramework="net6.0">
+        <dependency id="MediatR.Contracts" version="[2.0.1, 3.0.0)" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.DependencyInjection.Abstractions" version="8.0.0" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="MediatR.Contracts" version="[2.0.1, 3.0.0)" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Bcl.AsyncInterfaces" version="8.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.DependencyInjection.Abstractions" version="8.0.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>
