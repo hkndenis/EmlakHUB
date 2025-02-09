@@ -55,6 +55,5 @@ Modern bir emlak ilan platformu. İlan oluşturma, arama, filtreleme ve bildirim
 ### Gereksinimler
 - .NET 8 SDK
 - Node.js 18+
-- SQL Server
-- Azure Storage Account
+- PostgreSQL
 
