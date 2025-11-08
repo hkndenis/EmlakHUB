@@ -8,17 +8,32 @@ using PropertyListing.Application.Common.Interfaces;
 
 namespace PropertyListing.API.Controllers;
 
+/// <summary>
+/// Kimlik doğrulama işlemlerini yöneten controller
+/// Controller managing authentication operations
+/// </summary>
 [ApiController]
 [Route("api/[controller]")]
 public class AuthController : ApiControllerBase
 {
     private readonly IApplicationDbContext _context;
 
+    /// <summary>
+    /// AuthController yapıcı metodu
+    /// AuthController constructor
+    /// </summary>
+    /// <param name="context">Veritabanı context'i / Database context</param>
     public AuthController(IApplicationDbContext context)
     {
         _context = context;
     }
 
+    /// <summary>
+    /// Sisteme yeni kullanıcı kaydeder
+    /// Registers a new user to the system
+    /// </summary>
+    /// <param name="command">Kayıt bilgilerini içeren komut / Command containing registration information</param>
+    /// <returns>JWT token ve kullanıcı bilgileri / JWT token and user information</returns>
     [HttpPost("register")]
     [SwaggerOperation(Summary = "Yeni kullanıcı kaydı", Description = "Sisteme yeni bir kullanıcı kaydeder")]
     [ProducesResponseType(StatusCodes.Status200OK)]
@@ -43,6 +58,12 @@ public class AuthController : ApiControllerBase
         });
     }
 
+    /// <summary>
+    /// Kullanıcı girişi yapar
+    /// Performs user login
+    /// </summary>
+    /// <param name="command">Giriş bilgilerini içeren komut / Command containing login credentials</param>
+    /// <returns>JWT token ve kullanıcı bilgileri / JWT token and user information</returns>
     [HttpPost("login")]
     [SwaggerOperation(Summary = "Kullanıcı girişi", Description = "Kullanıcı girişi yapar ve JWT token döner")]
     [ProducesResponseType(StatusCodes.Status200OK)]
